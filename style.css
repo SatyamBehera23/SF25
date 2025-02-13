@@ -34,70 +34,69 @@ body {
   color: #e00;
   text-transform: uppercase;
   letter-spacing: 3px;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
-.navbar .nav-links {
+/* Navigation Links */
+.nav-links {
   list-style: none;
   display: flex;
   gap: 30px;
 }
 
-.navbar .nav-links a {
+.nav-links a {
   color: #fff;
   text-decoration: none;
   font-size: 18px;
   font-weight: 600;
-  letter-spacing: 1.5px;
   text-transform: uppercase;
   transition: 0.3s ease;
 }
 
-.navbar .nav-links a:hover {
+.nav-links a:hover {
   color: #e00;
   border-bottom: 3px solid #e00;
-  transform: scale(1.1);
 }
 
-/* Mobile Hamburger Menu */
-.navbar .hamburger {
+/* Mobile Menu */
+.hamburger {
   display: none;
   flex-direction: column;
-  gap: 4px;
+  gap: 5px;
   cursor: pointer;
 }
 
-.navbar .hamburger div {
-  width: 25px;
+.hamburger div {
+  width: 30px;
   height: 3px;
   background-color: white;
+  transition: 0.3s;
 }
 
-.navbar .nav-links-mobile {
+/* Mobile Navigation */
+.nav-links-mobile {
   display: none;
-  flex-direction: column;
-  align-items: center;
   position: absolute;
   top: 60px;
   left: 0;
   width: 100%;
   background: rgba(0, 0, 0, 0.95);
   padding: 20px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+  text-align: center;
 }
 
-.navbar .nav-links-mobile li {
-  margin: 10px 0;
+.nav-links-mobile li {
+  margin: 15px 0;
 }
 
-.navbar .nav-links-mobile a {
+.nav-links-mobile a {
   color: white;
   font-size: 18px;
 }
 
-/* Show mobile navbar links when hamburger is clicked */
+/* Show Mobile Menu */
 .navbar.active .nav-links-mobile {
   display: flex;
+  flex-direction: column;
 }
 
 /* Hero Section */
@@ -108,9 +107,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: white;
   position: relative;
-  overflow: hidden;
 }
 
 .hero::before {
@@ -134,7 +131,6 @@ body {
   font-weight: 900;
   letter-spacing: 5px;
   margin-bottom: 20px;
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9);
 }
 
 .hero p {
@@ -152,8 +148,7 @@ body {
   padding: 15px 40px;
   border-radius: 50px;
   text-decoration: none;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.6);
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .cta-button:hover {
@@ -161,121 +156,84 @@ body {
   transform: scale(1.05);
 }
 
-/* Models Section */
-.models {
-  text-align: center;
-  padding: 100px 20px;
+/* About Section */
+.about {
   background: #1a1a1a;
+  padding: 100px 20px;
 }
 
-.models h2 {
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1100px;
+  margin: auto;
+  gap: 40px;
+}
+
+.about img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.about-text {
+  max-width: 500px;
+}
+
+/* Featured Models Section */
+.featured-models {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.featured-models h2 {
   font-size: 45px;
   color: #e00;
   margin-bottom: 40px;
   text-transform: uppercase;
-  letter-spacing: 3px;
 }
 
-.model-cards {
+.model-container {
   display: flex;
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
 }
 
-.card {
+.model-card {
   background: #222;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 6px 15px rgba(255, 0, 0, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 350px;
+  width: 300px;
   text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.card img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
   transition: transform 0.3s ease;
 }
 
-.card h3 {
-  margin-top: 15px;
-  font-size: 24px;
-  color: #e00;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-.card p {
-  font-size: 16px;
-  color: #bbb;
-  margin-top: 10px;
-}
-
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 8px 20px rgba(255, 0, 0, 0.7);
-}
-
-.card:hover img {
-  transform: scale(1.1);
-}
-
-/* Customization Section */
-.customization {
-  background: #111;
-  padding: 100px 20px;
-}
-
-.customization h2 {
-  font-size: 40px;
-  color: #e00;
-  margin-bottom: 40px;
-  text-transform: uppercase;
-}
-
-.customization .options {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
-
-.customization .option-card {
-  background: #222;
-  padding: 20px;
-  border-radius: 8px;
-  width: 200px;
-  text-align: center;
-  box-shadow: 0px 6px 15px rgba(255, 0, 0, 0.4);
-}
-
-.customization .option-card img {
+.model-card img {
   width: 100%;
   border-radius: 8px;
 }
 
-.customization .option-card h3 {
+.model-card h3 {
+  margin-top: 15px;
   font-size: 22px;
   color: #e00;
-  margin-top: 15px;
 }
 
-.customization .option-card p {
+.model-card p {
   font-size: 16px;
   color: #bbb;
   margin-top: 10px;
 }
 
-.customization .option-card:hover {
+.model-card:hover {
   transform: scale(1.05);
   box-shadow: 0px 8px 20px rgba(255, 0, 0, 0.7);
 }
 
-/* Footer Styling */
+/* Footer */
 footer {
   background-color: #111;
   padding: 40px 20px;
@@ -311,34 +269,20 @@ footer .social-links a:hover {
     padding: 20px 30px;
   }
 
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
   .hero h1 {
     font-size: 50px;
-  }
-
-  .model-cards {
-    gap: 20px;
-  }
-
-  .card {
-    width: 280px;
   }
 }
 
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .navbar .nav-links {
-    flex-direction: column;
-    display: none;
-  }
-
-  .navbar .nav-links-mobile {
-    display: flex;
-  }
-
   .hero h1 {
     font-size: 40px;
   }
@@ -347,21 +291,26 @@ footer .social-links a:hover {
     font-size: 18px;
   }
 
-  .model-cards {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about img {
+    width: 90%;
+  }
+
+  .model-container {
     flex-direction: column;
     align-items: center;
   }
 
-  .card {
+  .model-card {
     width: 90%;
   }
 
   .cta-button {
     font-size: 16px;
     padding: 12px 35px;
-  }
-
-  footer p {
-    font-size: 14px;
   }
 }
