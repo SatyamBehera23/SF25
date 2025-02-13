@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferrari - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      /* General reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Body styles */
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      /* Navbar Styles */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        padding: 10px 20px;
+        position: relative;
+      }
+
+      .logo {
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      /* Navbar Links */
+      .nav-links {
+        list-style: none;
+        display: flex;
+      }
+
+      .nav-links li {
+        margin: 0 15px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        transition: color 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: #f44336;
+      }
+
+      /* Mobile navbar toggle */
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+      }
+
+      .hamburger div {
+        width: 25px;
+        height: 4px;
+        background-color: #fff;
+        margin: 4px 0;
+      }
+
+      /* Mobile navigation links */
+      .nav-links-mobile {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.9);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+      }
+
+      .nav-links-mobile li {
+        margin: 20px 0;
+      }
+
+      .nav-links-mobile a {
+        color: white;
+        font-size: 24px;
+      }
+
+      /* Active mobile menu */
+      .navbar.active .nav-links-mobile {
+        left: 0;
+      }
+
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+
+        .hamburger {
+          display: flex;
+        }
+      }
+    </style>
+</head>
+<body>
+
+  <!-- Navbar Section -->
+  <nav class="navbar">
+    <div class="logo">Ferrari</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="models.html">Models</a></li>
+      <li><a href="customization.html">Customization</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  
+    <ul class="nav-links-mobile">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="models.html">Models</a></li>
+      <li><a href="customization.html">Customization</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>  
+
+    <!-- Mobile Hamburger Icon -->
+    <div class="hamburger" onclick="toggleNavbar()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <!-- Mobile Navigation Links -->
+    <ul class="nav-links-mobile">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="models.html">Models</a></li>
+      <li><a href="customization.html">Customization</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    // Toggle navbar visibility on mobile
+    function toggleNavbar() {
+      const navbar = document.querySelector('.navbar');
+      navbar.classList.toggle('active');
+    }
+  </script>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Ferrari Excellence</h1>
+      <p>The thrill of speed and luxury awaits.</p>
+      <a href="models.html" class="cta-button">Explore Models</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <h2>About Us</h2>
+    <p>Discover the rich history of Ferrari. Combining cutting-edge technology with timeless Italian craftsmanship, Ferrari leads the automotive world in luxury and performance.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Ferrari. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+</body>
+</html>

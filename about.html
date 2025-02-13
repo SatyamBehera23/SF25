@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferrari - About</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar Section -->
+  <nav class="navbar">
+    <div class="logo">Scuderia</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="models.html">Models</a></li>
+      <li><a href="customization.html">Customization</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <!-- Mobile Hamburger Icon -->
+    <div class="hamburger" onclick="toggleNavbar()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <!-- Mobile Navigation Links -->
+    <ul class="nav-links-mobile">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="models.html">Models</a></li>
+      <li><a href="customization.html">Customization</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    // Toggle navbar visibility on mobile
+    function toggleNavbar() {
+      const navbar = document.querySelector('.navbar');
+      navbar.classList.toggle('active');
+    }
+  </script>
+
+  <!-- About Ferrari Section -->
+  <section class="about">
+    <h2>Our Legacy</h2>
+    <p>Founded in 1939 by Enzo Ferrari, the Ferrari brand has become synonymous with luxury, performance, and innovation. From the racetrack to the open road, Ferrari’s commitment to excellence is unparalleled.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Ferrari. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+</body>
+</html>

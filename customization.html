@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferrari - Customization</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar Section -->
+  <nav class="navbar">
+    <div class="logo">Scuderia</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="models.html">Models</a></li>
+      <li><a href="customization.html">Customization</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <!-- Mobile Hamburger Icon -->
+    <div class="hamburger" onclick="toggleNavbar()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <!-- Mobile Navigation Links -->
+    <ul class="nav-links-mobile">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="models.html">Models</a></li>
+      <li><a href="customization.html">Customization</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    // Toggle navbar visibility on mobile
+    function toggleNavbar() {
+      const navbar = document.querySelector('.navbar');
+      navbar.classList.toggle('active');
+    }
+  </script>
+
+  <!-- Customization Section -->
+  <section class="customization">
+    <h2>Customize Your Ferrari</h2>
+    <p>Choose from a variety of options to make your Ferrari truly unique.</p>
+    <div class="options">
+      <!-- Option 1 -->
+      <div class="option-card">
+        <img src="images/custom-color.jpg" alt="Custom Color">
+        <h3>Custom Color</h3>
+        <p>Choose from a wide range of vibrant colors.</p>
+      </div>
+      <!-- Option 2 -->
+      <div class="option-card">
+        <img src="images/custom-interior.jpg" alt="Custom Interior">
+        <h3>Interior Options</h3>
+        <p>Luxury finishes and high-quality materials for the perfect interior.</p>
+      </div>
+      <!-- Option 3 -->
+      <div class="option-card">
+        <img src="images/performance-package.jpg" alt="Performance Package">
+        <h3>Performance Package</h3>
+        <p>Enhance your Ferrari’s performance with cutting-edge packages.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Ferrari. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+</body>
+</html>
